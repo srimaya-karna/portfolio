@@ -1,4 +1,4 @@
-# portfolio🌐 Personal Portfolio Website
+# 🌐 Personal Portfolio Website
 
 A responsive personal portfolio website showcasing my profile, skills, projects, and achievements. The website is designed to present my background in physics, Python, data science, and AI/ML in a clean and accessible manner.
 
