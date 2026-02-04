@@ -1165,7 +1165,7 @@ ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: opacity 0.8s ease-out, visibility 0.8s;
+    transition: opacity 2s ease-out, visibility 0.8s;
     animation: autoHideLoader 6s forwards;
     /* Absolute CSS fallback */
 }
