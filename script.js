@@ -16,21 +16,17 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Close mobile menu when a link is clicked
-    if (navLinksItems) {
-        navLinksItems.forEach(link => {
-            link.addEventListener('click', () => {
-                if (navLinks && navLinks.classList.contains('nav-active')) {
-                    navLinks.classList.remove('nav-active');
-                    if (hamburger) {
-                        hamburger.classList.remove('toggle');
-                    }
-                }
-            });
+    navLinksItems.forEach(link => {
+        link.addEventListener('click', () => {
+            if (navLinks.classList.contains('nav-active')) {
+                navLinks.classList.remove('nav-active');
+                hamburger.classList.remove('toggle');
+            }
         });
-    }
+    });
 
     // Scroll Animations
-    const revealElements = document.querySelectorAll('.section-title, .about-content, .skills-grid, .project-panel, .timeline-item');
+    const revealElements = document.querySelectorAll('.section-title, .about-content, .skills-grid, .project-card, .timeline-item');
 
     // Add 'reveal' class initially to elements we want to animate
     revealElements.forEach(el => el.classList.add('reveal'));
@@ -65,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Header offset
                 const headerOffset = 70;
                 const elementPosition = targetElement.getBoundingClientRect().top;
-                const offsetPosition = elementPosition + window.scrollY - headerOffset;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
                 window.scrollTo({
                     top: offsetPosition,
@@ -129,8 +125,4 @@ document.addEventListener('DOMContentLoaded', () => {
     };
     logVisit();
 });
-
-
-
-
 
