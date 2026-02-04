@@ -125,19 +125,24 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /* Loader Initialization */
-window.addEventListener('load', () => {
+const removeLoader = () => {
     const loader = document.getElementById('loader');
-    if (loader) {
-        // Minimum load time of 1.5s to show off the animation
+    if (loader && !loader.classList.contains('fade-out')) {
+        loader.classList.add('fade-out');
+        // Remove from DOM after transition
         setTimeout(() => {
-            loader.classList.add('fade-out');
-            // Remove from DOM after transition to free up resources (optional, but good for accessibility)
-            setTimeout(() => {
-                loader.style.display = 'none';
-            }, 800);
-        }, 1500);
+            loader.style.display = 'none';
+        }, 800);
     }
+};
+
+window.addEventListener('load', () => {
+    // Minimum load time of 1.5s to show off the animation
+    setTimeout(removeLoader, 1500);
 });
+
+// Fallback: Force remove loader after 4 seconds to prevent getting stuck
+setTimeout(removeLoader, 4000);
 
 
 
