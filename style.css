@@ -295,13 +295,51 @@ ul {
 }
 
 .logo {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--text-main);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    text-decoration: none;
 }
 
-.logo .dot {
-    color: var(--primary);
+/* User's Periodic Table Design - Scaled for Navbar */
+.logo-element {
+    width: 45px;
+    height: 45px;
+    background: linear-gradient(136deg,
+            rgba(39, 79, 37, 1) 60%,
+            rgba(76, 155, 95, 1) 92%);
+    border: 2px solid #043918;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    /* Slight rounding for better UI */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.element-symbol {
+    color: #fcfeff;
+    font-size: 18px;
+    font-weight: 600;
+    position: relative;
+    line-height: 1;
+}
+
+.element-number {
+    font-size: 9px;
+    position: absolute;
+    top: -4px;
+    right: -10px;
+    font-weight: normal;
+}
+
+.logo-text {
+    font-family: Georgia, serif;
+    font-weight: 900;
+    /* Clean white to match site theme */
+    color: var(--text-main);
+    font-size: 1.5rem;
+    padding: 0 2px;
 }
 
 .nav-links {
