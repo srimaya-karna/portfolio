@@ -157,67 +157,7 @@ ul {
     backdrop-filter: blur(8px);
 }
 
-/* Focus Timer Widget */
-.focus-timer-container {
-    margin-top: 3rem;
-    padding: 2rem;
-    background: rgba(15, 23, 42, 0.4);
-    backdrop-filter: blur(10px);
-    border: 1px solid var(--border);
-    border-radius: 20px;
-    max-width: 400px;
-    text-align: center;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
-}
 
-.timer-display {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 3.5rem;
-    font-weight: 700;
-    color: var(--primary);
-    text-shadow: 0 0 20px var(--soft-glow);
-    margin-bottom: 1.5rem;
-}
-
-.timer-controls {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-bottom: 1rem;
-}
-
-.timer-btn {
-    padding: 0.8rem 1.5rem;
-    background: var(--primary);
-    color: white;
-    border: none;
-    border-radius: 8px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: var(--transition);
-}
-
-.timer-btn:hover {
-    background: var(--primary-hover);
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px var(--soft-glow);
-}
-
-.timer-btn.btn-secondary {
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.timer-status {
-    font-size: 0.8rem;
-    color: var(--text-muted);
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-.delay-4 {
-    animation-delay: 0.8s;
-}
 
 /* Space Button Design */
 .btn-space {
