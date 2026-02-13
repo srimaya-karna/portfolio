@@ -124,5 +124,123 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
     logVisit();
-});
 
+    // Cinematic Cursor Glow
+    const cursorGlow = document.querySelector('.cursor-glow');
+    if (cursorGlow) {
+        window.addEventListener('mousemove', (e) => {
+            cursorGlow.style.left = `${e.clientX}px`;
+            cursorGlow.style.top = `${e.clientY}px`;
+        });
+    }
+
+    // Focus Timer & Rain Sound Logic
+    let timerInterval = null;
+    let timeLeft = 25 * 60; // 25 minutes in seconds
+    let isTimerActive = false;
+
+    const timerDisplay = document.getElementById('timer-display');
+    const timerToggle = document.getElementById('timer-toggle');
+    const timerReset = document.getElementById('timer-reset');
+
+    // Rain Audio Setup
+    const rainAudio = new Audio('assets/audio/rain.mp3');
+    rainAudio.loop = true;
+    rainAudio.volume = 0.25;
+
+    const updateTimerDisplay = () => {
+        const minutes = Math.floor(timeLeft / 60);
+        const seconds = timeLeft % 60;
+        if (timerDisplay) {
+            timerDisplay.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+        }
+    };
+
+    const startTimer = () => {
+        if (isTimerActive) return;
+        isTimerActive = true;
+        if (timerToggle) timerToggle.textContent = 'Pause Focus';
+
+        // Try to play rain sound (will fail if no user interaction, but this is triggered by click)
+        rainAudio.play().catch(err => console.log('Audio playback delayed:', err));
+
+        timerInterval = setInterval(() => {
+            if (timeLeft > 0) {
+                timeLeft--;
+                updateTimerDisplay();
+            } else {
+                stopTimer();
+                alert('Session complete! Time for a break.');
+            }
+        }, 1000);
+    };
+
+    const stopTimer = () => {
+        isTimerActive = false;
+        clearInterval(timerInterval);
+        if (timerToggle) timerToggle.textContent = 'Start Focus';
+        rainAudio.pause();
+    };
+
+    const resetTimer = () => {
+        stopTimer();
+        timeLeft = 25 * 60;
+        updateTimerDisplay();
+    };
+
+    if (timerToggle) {
+        timerToggle.addEventListener('click', () => {
+            if (isTimerActive) {
+                stopTimer();
+            } else {
+                startTimer();
+            }
+        });
+    }
+
+    if (timerReset) {
+        timerReset.addEventListener('click', resetTimer);
+    }
+
+    // Robust Mobile Video Switcher
+    const videoElement = document.querySelector('.video-media');
+    if (videoElement) {
+        const setVideoSource = () => {
+            const isMobile = window.innerWidth <= 768;
+            const targetSrc = isMobile ? 'assets/vid-mobile.mp4' : 'assets/vid-desktop.mp4';
+
+            // Only update if source changed
+            if (!videoElement.currentSrc.includes(targetSrc)) {
+                videoElement.src = targetSrc;
+                videoElement.load();
+                videoElement.play().catch(() => { });
+            }
+        };
+
+        // Initial check
+        setVideoSource();
+        // Resize check with debounce
+        let resizeTimer;
+        window.addEventListener('resize', () => {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(setVideoSource, 250);
+        });
+    }
+
+    // Scroll-to-Hide Navbar Logic
+    let lastScrollY = window.scrollY;
+    const navbar = document.querySelector('.navbar');
+
+    if (navbar) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > lastScrollY && window.scrollY > 100) {
+                // Scrolling down
+                navbar.classList.add('nav-hidden');
+            } else {
+                // Scrolling up
+                navbar.classList.remove('nav-hidden');
+            }
+            lastScrollY = window.scrollY;
+        });
+    }
+});

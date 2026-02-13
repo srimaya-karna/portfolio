@@ -1,4 +1,8 @@
 {
+  "scripts": {
+    "build": "echo 'No build step required for static site'",
+    "preview": "npx serve -s ."
+  },
   "dependencies": {
     "readme-md-generator": "^1.0.0"
   }
