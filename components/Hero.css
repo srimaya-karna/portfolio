@@ -1,0 +1,226 @@
+/* 
+  Brutalist-Glassmorphism Hero Styles 
+  Import this file into your Hero.jsx component 
+*/
+
+.hero-brutalist {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    font-family: 'Aspekta', -apple-system, system-ui, sans-serif;
+    color: #f5f5f5;
+    background-color: #0a0a0a;
+}
+
+/* Layer 1: Background Video (bottom visual layer) */
+.video-background-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.video-media {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Layer 2: Dark overlay for contrast */
+.hero-dark-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(10, 10, 10, 0.55);
+    z-index: 2;
+}
+
+/* Layer 3, 4, 5: UI Elements & Layout */
+.hero-content-wrapper {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    max-width: 1200px;
+    width: 100%;
+    align-items: center;
+}
+
+/* Left Section */
+.hero-left {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.hero-title {
+    font-weight: 800;
+    font-size: 72px;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    margin: 0;
+}
+
+.neon-accent {
+    color: #00d9ff;
+    text-shadow: 0 0 20px rgba(0, 217, 255, 0.2);
+}
+
+.hero-subtitle {
+    font-weight: 500;
+    font-size: 20px;
+    opacity: 0.85;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.hero-cta-group {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.btn-brutalist-primary,
+.btn-brutalist-secondary {
+    border: 2px solid #00d9ff;
+    background: transparent;
+    color: #f5f5f5;
+    padding: 0.75rem 2rem;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 4px;
+    /* Slight brutalist edge */
+    display: inline-flex;
+    transition: all 0.3s ease;
+}
+
+.btn-brutalist-primary:hover,
+.btn-brutalist-secondary:hover {
+    background: rgba(0, 217, 255, 0.1);
+    box-shadow: 0 0 40px rgba(0, 217, 255, 0.15);
+    text-shadow: 0 0 8px rgba(0, 217, 255, 0.5);
+}
+
+.btn-brutalist-secondary {
+    border-color: #ff006e;
+}
+
+.btn-brutalist-secondary:hover {
+    background: rgba(255, 0, 110, 0.1);
+    box-shadow: 0 0 40px rgba(255, 0, 110, 0.15);
+    text-shadow: 0 0 8px rgba(255, 0, 110, 0.5);
+}
+
+/* Right Section - Bento Grid */
+.hero-right .bento-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+/* Layer 3: Glassmorphism UI */
+.bento-card {
+    position: relative;
+    border: 2px solid #00d9ff;
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(16px);
+    border-radius: 16px;
+    padding: 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.bento-card:hover {
+    transform: translateY(-6px) !important;
+    box-shadow: 0 0 20px rgba(0, 217, 255, 0.35);
+    border-color: #fff;
+    /* Border brightens slightly on hover */
+}
+
+.bento-content {
+    position: relative;
+    z-index: 2;
+}
+
+.bento-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #f5f5f5;
+    margin-top: 0;
+}
+
+.bento-micro {
+    font-size: 14px;
+    font-weight: 400;
+    opacity: 0.6;
+    margin: 0;
+}
+
+/* Glass Glow Effects */
+.bento-glow {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(0, 217, 255, 0.05) 0%, rgba(0, 0, 0, 0) 70%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+}
+
+.bento-card:hover .bento-glow {
+    opacity: 1;
+}
+
+/* Responsiveness */
+@media (max-width: 992px) {
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .hero-title {
+        font-size: 56px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 42px;
+    }
+
+    .hero-subtitle {
+        font-size: 18px;
+    }
+
+    .hero-right .bento-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .hero-content-wrapper {
+        height: auto;
+        padding-top: 6rem;
+        padding-bottom: 4rem;
+    }
+}
