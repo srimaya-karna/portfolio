@@ -1,0 +1,403 @@
+/* =====================================================
+   RESPONSIVE.CSS - Comprehensive Mobile Optimisation
+   Covers: index.html, projects.html, education.html
+   Breakpoints: 1024px (Tablet), 768px (Mobile), 480px (Small)
+   ===================================================== */
+
+/* ── GPU Acceleration & Box Model Reset ────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ── Container fluid padding ───────────────────────── */
+.container {
+  width: 100%;
+  max-width: 1100px;
+  padding: 0 1.25rem;
+}
+
+/* ═══════════════════════════════════════════════════
+   NAVBAR
+   ═══════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0.75rem 0;
+  }
+
+  .logo-text {
+    font-size: 1.2rem;
+  }
+
+  .logo-element {
+    width: 36px;
+    height: 36px;
+  }
+
+  .nav-links {
+    position: fixed; /* fixed so it overlays content */
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: min(75vw, 280px); /* cap width */
+    background: rgba(10, 15, 25, 0.97);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    z-index: 999;
+    padding: 2rem 1rem;
+    border-left: 1px solid rgba(111, 168, 255, 0.15);
+  }
+
+  .nav-links.nav-active {
+    transform: translateX(0);
+  }
+
+  .nav-links li {
+    width: 100%;
+    text-align: center;
+    padding: 0;
+  }
+
+  .nav-links a,
+  .nav-links .btn-ridge {
+    font-size: 1.1rem;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hamburger {
+    display: block;
+    z-index: 1000;
+  }
+}
+
+/* ═══════════════════════════════════════════════════
+   HERO SECTION  (hero-brutalist.css complement)
+   ═══════════════════════════════════════════════════ */
+@media (max-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    text-align: center;
+  }
+
+  .hero-title {
+    font-size: 52px;
+  }
+
+  .hero-cta-group {
+    justify-content: center;
+  }
+
+  .hero-right .bento-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-content-wrapper {
+    padding: 6rem 1rem 3rem;
+  }
+
+  .hero-title {
+    font-size: 36px;
+  }
+
+  .hero-subtitle {
+    font-size: 16px;
+  }
+
+  .hero-cta-group {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+
+  .btn-brutalist-primary,
+  .btn-brutalist-secondary {
+    width: 100%;
+    justify-content: center;
+    padding: 0.9rem 1.5rem;
+    min-height: 44px;
+  }
+
+  .hero-right .bento-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .bento-card {
+    padding: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 28px;
+  }
+
+  .hero-subtitle {
+    font-size: 14px;
+  }
+}
+
+/* ═══════════════════════════════════════════════════
+   ABOUT SECTION  – .outer animated card
+   ═══════════════════════════════════════════════════ */
+.outer,
+.dot {
+  will-change: transform;
+}
+
+@media (max-width: 1024px) {
+  .outer {
+    max-width: 650px;
+    height: auto;
+    min-height: 460px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-container-flex {
+    padding: 2rem 0;
+  }
+
+  .outer {
+    max-width: 100%;
+    height: auto;
+    min-height: 400px;
+    border-radius: 14px;
+  }
+
+  .outer .card {
+    padding: 1.5rem;
+    border-radius: 13px;
+  }
+
+  .outer .card .text {
+    font-size: 2rem;
+  }
+
+  .about-desc {
+    font-size: 0.95rem;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .outer .card .text {
+    font-size: 1.6rem;
+  }
+
+  .about-desc {
+    font-size: 0.88rem;
+  }
+}
+
+/* ═══════════════════════════════════════════════════
+   SKILLS SECTION  – F1 Race Cards
+   ═══════════════════════════════════════════════════ */
+@media (max-width: 1024px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .race-card {
+    width: 100%;
+  }
+}
+
+/* ═══════════════════════════════════════════════════
+   PROJECTS PAGE  – 3D Flip Cards
+   ═══════════════════════════════════════════════════ */
+@media (max-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .projects-page {
+    padding-top: 100px;
+  }
+
+  .card {
+    height: 220px;
+  }
+}
+
+/* ═══════════════════════════════════════════════════
+   EDUCATION PAGE  – Retro Code Cards
+   ═══════════════════════════════════════════════════ */
+@media (max-width: 1024px) {
+  .education-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .card-container {
+    max-width: 580px;
+  }
+}
+
+@media (max-width: 768px) {
+  .education-page {
+    padding-top: 100px;
+    padding-bottom: 3rem;
+  }
+
+  .card-container {
+    max-width: 100%;
+    min-height: 280px;
+  }
+
+  .card-body {
+    font-size: 11px;
+  }
+
+  .code-content {
+    font-size: 11px;
+  }
+}
+
+/* ═══════════════════════════════════════════════════
+   CONTACT SECTION
+   ═══════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+  .contact-container {
+    max-width: 100%;
+    padding: 0 1rem;
+  }
+
+  .btn-send {
+    width: 100%;
+    min-height: 44px;
+  }
+
+  .social-wrapper {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .icon {
+    min-width: 44px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* ═══════════════════════════════════════════════════
+   LOADER – Steve pixel art
+   ═══════════════════════════════════════════════════ */
+@media (max-width: 480px) {
+  #steve {
+    transform: scale(0.28);
+  }
+}
+
+/* ═══════════════════════════════════════════════════
+   GENERAL SECTIONS
+   ═══════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+  .section {
+    padding: 3rem 0;
+  }
+
+  .section-title {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.4rem;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+}
+
+/* ═══════════════════════════════════════════════════
+   FOOTER
+   ═══════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+  .footer {
+    padding: 1.5rem 1rem;
+    font-size: 0.8rem;
+  }
+}
+
+/* ═══════════════════════════════════════════════════
+   TOUCH-FRIENDLY INTERACTIVE TARGETS (min 44px)
+   ═══════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+  .btn-ridge,
+  .btn-space,
+  .copy-button {
+    min-height: 44px;
+  }
+
+  a {
+    /* Ensure tap targets feel natural */
+    padding: 0.1rem 0;
+  }
+}
+
+/* ═══════════════════════════════════════════════════
+   ANIMATION STABILITY – prevent jitter and overflow
+   ═══════════════════════════════════════════════════ */
+.card,
+.outer,
+.dot,
+.ray,
+.bento-card,
+.card-container,
+.race-card {
+  will-change: transform;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+/* Prevent animation overflow clipping causing scrollbars */
+.outer,
+.card-container {
+  overflow: hidden;
+}

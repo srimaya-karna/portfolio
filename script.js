@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Scroll Animations
-    const revealElements = document.querySelectorAll('.section-title, .about-content, .skills-grid, .project-card, .timeline-item');
+    const revealElements = document.querySelectorAll('.section-title, .about-content, .skills-grid, .project-card, .card, .reveal, .timeline-item');
 
     // Add 'reveal' class initially to elements we want to animate
     revealElements.forEach(el => el.classList.add('reveal'));

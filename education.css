@@ -1,0 +1,192 @@
+/* Education Page Styles - Retro Code Card adapted for Dark Theme */
+.education-page {
+    padding-top: 120px;
+    padding-bottom: 80px;
+}
+
+.education-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    justify-items: center;
+}
+
+/* From Uiverse.io by pharmacist-sabot - ADAPTED FOR THEME */
+.card-container {
+    width: 100%;
+    max-width: 450px;
+    min-height: 320px;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 1px;
+    font-family: "MS Sans Serif", "Tahoma", sans-serif;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.card-container:hover {
+    transform: translateY(-5px);
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 23, 42, 0.6);
+    border-radius: 6px;
+    overflow: hidden;
+    color: var(--text-main);
+}
+
+.card-header {
+    background: #1e293b; /* Deep slate instead of 98 blue */
+    padding: 0;
+    flex-shrink: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.card-tabs {
+    display: flex;
+    background: transparent;
+    height: 24px;
+}
+
+.card-tab {
+    padding: 4px 12px;
+    font-size: 11px;
+    color: var(--text-main);
+    background: rgba(255, 255, 255, 0.05);
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.card-tab.active {
+    background: #334155;
+    border-bottom: none;
+    z-index: 2;
+}
+
+.card-body {
+    display: flex;
+    flex-grow: 1;
+    overflow: auto;
+    padding: 8px;
+    font-family: "Courier New", monospace;
+    font-size: 13px;
+    line-height: 1.4;
+    background: rgba(0, 0, 0, 0.2);
+    margin: 4px;
+    border-radius: 4px;
+}
+
+.line-numbers {
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px;
+    text-align: right;
+    color: rgba(255, 255, 255, 0.3);
+    user-select: none;
+    font-size: 12px;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.code-content {
+    margin: 0;
+    padding: 0 12px;
+    white-space: pre;
+    overflow-x: auto;
+    color: var(--text-main);
+}
+
+/* Syntax Highlighting */
+.code-comment {
+    color: #94a3b8; /* Muted slate */
+    font-style: italic;
+}
+.code-keyword {
+    color: var(--primary); /* Site primary blue */
+    font-weight: bold;
+}
+.code-variable {
+    color: #4ade80; /* Success green */
+}
+.code-variable-2 {
+    color: #ff9d00; /* Warning orange */
+}
+.code-function {
+    color: #ffffff;
+    font-weight: bold;
+}
+.code-string {
+    color: #cbd5e1;
+}
+.code-number {
+    color: #60a5fa;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.1);
+    padding: 4px 12px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    flex-shrink: 0;
+    height: 30px;
+}
+
+.language-name {
+    color: var(--text-muted);
+    font-size: 11px;
+}
+
+.copy-button {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-main);
+    padding: 2px 8px;
+    cursor: pointer;
+    font-size: 11px;
+    border-radius: 4px;
+    transition: var(--transition);
+}
+
+.copy-button:hover {
+    background: var(--primary);
+    color: #000;
+}
+
+.copy-button svg {
+    width: 12px;
+    height: 12px;
+}
+
+/* Scrollbar adaptation */
+.card-body::-webkit-scrollbar {
+    width: 8px;
+}
+
+.card-body::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.card-body::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 992px) {
+    .education-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+}

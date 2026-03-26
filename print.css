@@ -1,0 +1,392 @@
+/* =====================================================
+   PRINT.CSS - Recruiter-Friendly Print & Accessibility
+   Zero visual impact on normal browsing mode.
+   Ctrl+P → clean, resume-like, professional output.
+   ===================================================== */
+
+/* ── Screen-reader-only utility ─────────────────────── */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ═══════════════════════════════════════════════════
+   @media print — FULL PRINT OPTIMISATION
+   ═══════════════════════════════════════════════════ */
+@media print {
+
+  /* ── Print Header ──────────────────────────────── */
+  body::before {
+    content: "Srimay Pradhan — AI & Research Portfolio";
+    display: block;
+    font-size: 18pt;
+    font-weight: 700;
+    font-family: 'Inter', Arial, sans-serif;
+    text-align: center;
+    padding-bottom: 12pt;
+    border-bottom: 2px solid #333;
+    margin-bottom: 20pt;
+    color: #000;
+  }
+
+  /* ── Base Reset ────────────────────────────────── */
+  * {
+    box-shadow: none !important;
+    text-shadow: none !important;
+    animation: none !important;
+    transition: none !important;
+    -webkit-animation: none !important;
+    background-attachment: initial !important;
+  }
+
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 11pt;
+    line-height: 1.5;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    opacity: 1 !important;
+  }
+
+  html {
+    font-size: 12pt;
+  }
+
+  /* ── Hide Non-Essential UI ─────────────────────── */
+  #loader,
+  .video-background,
+  .cursor-glow,
+  .light-reflection,
+  nav,
+  .navbar,
+  .hamburger,
+  footer,
+  .footer,
+  .dot,
+  .ray,
+  .galaxy,
+  .nebula,
+  .starfield,
+  .stardust,
+  .cosmic-ring,
+  .cosmic-glow,
+  .cosmic-input-mask,
+  .wormhole-border,
+  .wormhole-icon,
+  .hero-dark-overlay,
+  .container-stars,
+  .glow,
+  .btn-space .container-stars,
+  .social-wrapper,
+  .copy-button,
+  .card-footer,
+  .card-header,
+  .line-numbers,
+  .line.topl,
+  .line.leftl,
+  .line.bottoml,
+  .line.rightl {
+    display: none !important;
+  }
+
+  /* ── Typography ────────────────────────────────── */
+  h1, h2, h3 {
+    color: #000 !important;
+    page-break-after: avoid;
+    font-family: 'Inter', Arial, sans-serif;
+  }
+
+  h1 { font-size: 20pt; }
+  h2 { font-size: 16pt; margin-top: 18pt; margin-bottom: 8pt; }
+  h3 { font-size: 13pt; }
+
+  p, span, div, li, code, pre {
+    color: #111 !important;
+    font-size: 11pt;
+    line-height: 1.5;
+  }
+
+  strong {
+    color: #000 !important;
+  }
+
+  a {
+    color: #000 !important;
+    text-decoration: underline;
+  }
+
+  /* Print URLs after links */
+  a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 9pt;
+    color: #555 !important;
+    word-break: break-all;
+  }
+
+  /* ── Layout Cleanup ────────────────────────────── */
+  .container {
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .section {
+    padding: 12pt 0 !important;
+    page-break-inside: avoid;
+  }
+
+  /* ── Hero Section → Clean Header ───────────────── */
+  .hero-brutalist {
+    min-height: auto !important;
+    padding: 0 !important;
+    display: block !important;
+  }
+
+  .hero-grid {
+    display: block !important;
+  }
+
+  .hero-right {
+    display: none !important;
+  }
+
+  .hero-title {
+    font-size: 22pt !important;
+    color: #000 !important;
+    text-shadow: none !important;
+    margin-bottom: 6pt;
+  }
+
+  .neon-accent {
+    color: #333 !important;
+    text-shadow: none !important;
+  }
+
+  .hero-subtitle {
+    font-size: 12pt !important;
+    color: #333 !important;
+    margin-bottom: 12pt;
+  }
+
+  .hero-cta-group {
+    display: none !important;
+  }
+
+  /* ── About Section ─────────────────────────────── */
+  .outer {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    min-height: auto !important;
+    background: none !important;
+    padding: 10pt 0 !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+  }
+
+  .outer .card {
+    background: none !important;
+    border: 1px solid #ccc !important;
+    border-radius: 6px !important;
+    padding: 16pt !important;
+    display: block !important;
+    height: auto !important;
+    backdrop-filter: none !important;
+  }
+
+  .outer .card .text {
+    font-size: 16pt !important;
+    background: none !important;
+    -webkit-background-clip: initial !important;
+    background-clip: initial !important;
+    color: #000 !important;
+    margin-bottom: 8pt;
+  }
+
+  .about-desc {
+    color: #222 !important;
+    font-size: 11pt !important;
+    max-width: 100% !important;
+  }
+
+  /* ── Skills Section ────────────────────────────── */
+  .skills-grid,
+  .race-card {
+    display: block !important;
+  }
+
+  .race-card {
+    page-break-inside: avoid;
+    margin-bottom: 10pt;
+    border: 1px solid #ddd;
+    padding: 10pt;
+    border-radius: 4px;
+  }
+
+  .track-container svg {
+    display: none !important;
+  }
+
+  .sector-text {
+    font-size: 14pt !important;
+    color: #000 !important;
+    font-weight: 700;
+    margin-bottom: 6pt;
+  }
+
+  .lap-times div {
+    display: flex;
+    justify-content: space-between;
+    padding: 3pt 0;
+    border-bottom: 1px solid #eee;
+    color: #000 !important;
+  }
+
+  /* ── Projects Cards ────────────────────────────── */
+  .projects-grid {
+    display: block !important;
+  }
+
+  .card,
+  .card-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    background: #fff !important;
+    border: 1px solid #ccc !important;
+    border-radius: 6px !important;
+    page-break-inside: avoid;
+    margin-bottom: 10pt;
+    overflow: visible !important;
+    height: auto !important;
+    perspective: none !important;
+  }
+
+  .card__img {
+    display: none !important;
+  }
+
+  .card svg {
+    display: none !important;
+  }
+
+  .card__content {
+    position: relative !important;
+    transform: none !important;
+    background: none !important;
+    padding: 12pt !important;
+  }
+
+  .card__title {
+    color: #000 !important;
+    font-size: 13pt !important;
+    margin-bottom: 6pt;
+  }
+
+  .card__description {
+    color: #222 !important;
+    font-size: 11pt !important;
+  }
+
+  /* ── Education Code Cards ──────────────────────── */
+  .education-grid {
+    display: block !important;
+  }
+
+  .card-container {
+    background: #fff !important;
+    border: 1px solid #ccc !important;
+    padding: 8pt !important;
+    border-radius: 4px !important;
+    max-width: 100% !important;
+  }
+
+  .card-body {
+    background: #f9f9f9 !important;
+    border: 1px solid #eee !important;
+  }
+
+  .code-content {
+    font-size: 10pt !important;
+    color: #000 !important;
+  }
+
+  .code-comment { color: #555 !important; }
+  .code-keyword { color: #000 !important; }
+  .code-variable { color: #222 !important; }
+  .code-variable-2 { color: #333 !important; }
+  .code-string { color: #444 !important; }
+  .code-function { color: #000 !important; }
+
+  /* ── Contact Section ───────────────────────────── */
+  #contact {
+    page-break-before: always;
+  }
+
+  .contact-form {
+    display: none !important;
+  }
+
+  .contact-subtitle {
+    color: #222 !important;
+    font-size: 11pt !important;
+  }
+
+  /* ── Section Titles ────────────────────────────── */
+  .section-title {
+    font-size: 16pt !important;
+    color: #000 !important;
+  }
+
+  .section-title::after {
+    background-color: #333 !important;
+  }
+
+  .glitch::before,
+  .glitch::after {
+    display: none !important;
+  }
+
+  /* ── Page Breaks ───────────────────────────────── */
+  .section {
+    page-break-inside: avoid;
+  }
+
+  img {
+    max-width: 100% !important;
+    page-break-inside: avoid;
+  }
+
+  /* ── Reveal Screen-Only content in print ────────── */
+  .sr-only {
+    position: static !important;
+    width: auto !important;
+    height: auto !important;
+    overflow: visible !important;
+    clip: auto !important;
+    white-space: normal !important;
+    margin: 10pt 0 !important;
+    padding: 8pt !important;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: #f5f5f5 !important;
+  }
+
+  .sr-only h2 {
+    font-size: 14pt !important;
+    margin-bottom: 4pt;
+  }
+
+  .sr-only p, .sr-only li {
+    font-size: 11pt !important;
+  }
+}

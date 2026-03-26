@@ -4,9 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Srimaya | AI & Research Portfolio</title>
+    <title>Srimay Pradhan | AI & Research Portfolio</title>
     <meta name="description"
-        content="Portfolio of Srimaya, an AI/ML & Research-oriented student passionate about Physics, Mathematics, and Artificial Intelligence.">
+        content="Portfolio of Srimay Pradhan — AI/ML & Research-oriented student passionate about Physics, Mathematics, and Artificial Intelligence. Projects, Education, Skills, and Contact.">
+    <meta name="author" content="Srimay Pradhan">
+    <meta name="keywords" content="AI, Machine Learning, Portfolio, Physics, Mathematics, SciML, Computational Physics, Web Developer">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,18 +17,80 @@
 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="hero-brutalist.css">
+    <link rel="stylesheet" href="loader.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="print.css" media="print">
 </head>
 
 <body>
-    <!-- Loading Screen -->
-    <div id="loader" class="loader-container">
-        <div class="quantum-loader">
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="orbit"></div>
+    <!-- Pixel Art Loader (Steve) -->
+    <div id="loader">
+        <div id="steve">
+            <div id="div1"></div>
+            <div id="div2"></div>
+            <div id="div3"></div>
+            <div id="div4"></div>
+            <div id="div5"></div>
+            <div id="div6"></div>
+            <div id="div7"></div>
+            <div id="div8"></div>
+            <div id="div9"></div>
+            <div id="div10"></div>
+            <div id="div11"></div>
+            <div id="div12"></div>
+            <div id="div13"></div>
+            <div id="div14"></div>
+            <div id="div15"></div>
+            <div id="div16"></div>
+            <div id="div17"></div>
+            <div id="div18"></div>
+            <div id="div19"></div>
+            <div id="div20"></div>
+            <div id="div21"></div>
+            <div id="div22"></div>
+            <div id="div23"></div>
+            <div id="div24"></div>
+            <div id="div25"></div>
+            <div id="div26"></div>
+            <div id="div27"></div>
+            <div id="div28"></div>
+            <div id="div29"></div>
+            <div id="div30"></div>
+            <div id="div31"></div>
+            <div id="div32"></div>
+            <div id="div33"></div>
+            <div id="div34"></div>
+            <div id="div35"></div>
+            <div id="div36"></div>
+            <div id="div37"></div>
+            <div id="div38"></div>
+            <div id="div39"></div>
+            <div id="div40"></div>
+            <div id="div41"></div>
+            <div id="div42"></div>
+            <div id="div43"></div>
+            <div id="div44"></div>
+            <div id="div45"></div>
+            <div id="div46"></div>
+            <div id="div47"></div>
+            <div id="div48"></div>
+            <div id="div49"></div>
+            <div id="div50"></div>
+            <div id="div51"></div>
+            <div id="div52"></div>
+            <div id="div53"></div>
+            <div id="div54"></div>
+            <div id="div55"></div>
+            <div id="div56"></div>
+            <div id="div57"></div>
+            <div id="div58"></div>
+            <div id="div59"></div>
+            <div id="div60"></div>
+            <div id="div61"></div>
+            <div id="div62"></div>
+            <div id="div63"></div>
+            <div id="div64"></div>
         </div>
-        <div class="loading-text">Initializing Systems...</div>
     </div>
 
     <!-- Video Background -->
@@ -59,8 +123,8 @@
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#education">Education</a></li>
+                <li><a href="projects.html" class="btn-ridge">Projects</a></li>
+                <li><a href="education.html" class="btn-ridge">Education</a></li>
                 <!-- Nav Button -->
                 <li>
                     <a href="#contact" class="btn-ridge">Contact</a>
@@ -93,7 +157,7 @@
                     </p>
 
                     <div class="hero-cta-group fade-in delay-2">
-                        <a href="#projects" class="btn-brutalist-primary">View Projects</a>
+                        <a href="projects.html" class="btn-brutalist-primary">View Projects</a>
                         <a href="#contact" class="btn-brutalist-secondary">Contact Me</a>
                     </div>
                 </div>
@@ -141,33 +205,29 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="section">
-        <div class="container">
+    <section id="about" class="section" aria-label="About Me">
+        <div class="container about-container-flex">
             <h2 class="section-title glitch" data-text="About Me">About Me</h2>
-            <div class="about-card-container">
+            <div class="outer reveal">
+                <div class="dot"></div>
                 <div class="card">
-                    <p class="card-title">About Me</p>
-                    <p class="small-desc">
-                        I am a dedicated researcher and student with a profound passion for understanding the
-                        fundamental
-                        laws of nature through the lens of computation. My academic journey is driven by curiosity in
-                        <strong>Theoretical Physics</strong> and <strong>Advanced Mathematics</strong>, which I apply to
-                        solve complex problems in <strong>Artificial Intelligence</strong>.
-                    </p>
-                    <p class="small-desc" style="margin-top: 1rem;">
-                        My goal is to contribute to cutting-edge research, particularly in areas like Scientific Machine
-                        Learning (SciML) and Computational Physics.
-                    </p>
-                    <div class="go-corner">
-                        <div class="go-arrow">→</div>
+                    <div class="ray"></div>
+                    <div class="text">About Me</div>
+                    <div class="about-desc">
+                        I am a dedicated researcher and student with a profound passion for understanding the fundamental laws of nature through the lens of computation. My academic journey is driven by curiosity in <strong>Theoretical Physics</strong> and <strong>Advanced Mathematics</strong>, which I apply to solve complex problems in <strong>Artificial Intelligence</strong>.<br><br>
+                        My goal is to contribute to cutting-edge research, particularly in areas like Scientific Machine Learning (SciML) and Computational Physics.
                     </div>
+                    <div class="line topl"></div>
+                    <div class="line leftl"></div>
+                    <div class="line bottoml"></div>
+                    <div class="line rightl"></div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Skills Section -->
-    <section id="skills" class="section bg-alt">
+    <section id="skills" class="section bg-alt" aria-label="Technical Skills">
         <div class="container">
             <h2 class="section-title glitch" data-text="Technical Arsenal">Technical Arsenal</h2>
             <!-- F1 Car Definition -->
@@ -336,112 +396,10 @@
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="section">
-        <div class="container">
-            <h2 class="section-title glitch" data-text="Selected Projects">Selected Projects</h2>
-            <div class="projects-grid-modern">
-                <!-- Project 1 -->
-                <div class="project-card reveal">
-                    <div class="project-card-content">
-                        <h3>PINNs Research</h3>
-                        <p>Implemented Physics-Informed Neural Networks to solve non-linear partial differential
-                            equations, focusing on the Schrödinger equation.(Future project)</p>
-                        <div class="project-tech-tags">
-                            <span>Python</span><span>PyTorch</span><span>SciPy</span>
-                        </div>
-                        <div class="project-card-links">
-                            <a href="https://github.com/srimaya-kumar-pradhan" target="_blank" class="btn-project-link">
-                                <svg class="svgIcon" viewBox="0 0 496 512" height="1.4em"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z">
-                                    </path>
-                                </svg>
-                                <span class="text">view on Github</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
 
-                <!-- Project 2 -->
-                <div class="project-card reveal">
-                    <div class="project-card-content">
-                        <h3>Exoplanet Detection</h3>
-                        <h5 class="subtitle">using Stellar Light Curves (Transit Method) Working</h5>
-                        <p>Simulate, visualize, and analyze stellar light curves to automatically detect these transit
-                            events and estimate planetary characteristics.</p>
-                        <div class="project-tech-tags">
-                            <span>Python</span><span>Dash</span><span>Scikit-Learn</span>
-                        </div>
-                        <div class="project-card-links">
-                            <a href="https://github.com/srimaya-kumar-pradhan" target="_blank" class="btn-project-link">
-                                <svg class="svgIcon" viewBox="0 0 496 512" height="1.4em"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z">
-                                    </path>
-                                </svg>
-                                <span class="text">view on Github</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 3 -->
-                <div class="project-card reveal">
-                    <div class="project-card-content">
-                        <h3>Blackbody Radiation Curve Fitting</h3>
-                        <p>Performed nonlinear curve fitting on blackbody radiation spectra using Planck’s law in Python
-                            to estimate temperature and infer the Boltzmann constant from experimental data.</p>
-                        <div class="project-tech-tags">
-                            <span>NumPy</span><span>SciPy</span><span>Matplotlib</span>
-                        </div>
-                        <div class="project-card-links">
-                            <a href="https://github.com/srimaya-kumar-pradhan/Black-Body-radiation-Curvefitting/blob/main/README.md"
-                                target="_blank" class="btn-project-link">
-                                <svg class="svgIcon" viewBox="0 0 496 512" height="1.4em"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z">
-                                    </path>
-                                </svg>
-                                <span class="text">view on Github</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Education Section -->
-    <section id="education" class="section bg-alt">
-        <div class="container">
-            <h2 class="section-title glitch" data-text="Education">Education</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-date">2024 - 2028</div>
-                    <div class="timeline-content">
-                        <h3>Bachelor of Technology in Computer Science</h3>
-                        <p class="institution">GIET University</p>
-                        <p>Focusing on mathematics. Active member of the Data Science Club.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">2021 - 2023</div>
-                    <div class="timeline-content">
-                        <h3>Higher Secondary Education</h3>
-                        <p class="institution">St. Xavier's High school</p>
-                        <p>Major in Sciences. Consistent top performer in Physics and Calculus.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="section">
+    <section id="contact" class="section" aria-label="Contact">
         <div class="container contact-container">
             <h2 class="section-title glitch" data-text="Get in Touch">Get in Touch</h2>
             <p class="contact-subtitle">Interested in collaboration or have a research opportunity? I'd love to hear
@@ -587,6 +545,20 @@
         </div>
     </section>
 
+    <!-- Screen-Reader / Bot Profile Summary (invisible on screen) -->
+    <div class="sr-only">
+        <h2>Profile Summary</h2>
+        <p>Srimay Pradhan — B.Tech Computer Science student at GIET University (2024–2028). Dedicated researcher passionate about Theoretical Physics, Advanced Mathematics, and Artificial Intelligence. Currently focused on Scientific Machine Learning (SciML) and Computational Physics.</p>
+        <h3>Key Skills</h3>
+        <ul>
+            <li>AI & Data Science: Python, PyTorch, TensorFlow, Pandas, NumPy</li>
+            <li>Web Development: HTML, CSS, JavaScript, React</li>
+            <li>Research: SciML, PINNs, Curve Fitting, Exoplanet Detection</li>
+        </ul>
+        <h3>Contact</h3>
+        <p>Email: kuamrsrimay134@gmail.com | GitHub: srimaya-kumar-pradhan | LinkedIn: srimay-kumar-pradhan</p>
+    </div>
+
     <footer class="footer">
         <div class="container">
             <p>&copy; </p>
@@ -594,28 +566,16 @@
     </footer>
 
     <script>
-        /* Robust Loader Handling */
-        (function () {
-            const removeLoader = () => {
-                const loader = document.getElementById('loader');
-                if (loader) {
-                    loader.classList.add('fade-out');
-                    loader.style.pointerEvents = 'none';
-                    setTimeout(() => {
-                        loader.style.display = 'none';
-                    }, 1200); // Wait for transition
-                }
-            };
-
-            // Normal load
-            window.addEventListener('load', () => setTimeout(removeLoader, 1500));
-
-            // Fallback 1: DOMContentLoaded
-            document.addEventListener('DOMContentLoaded', () => setTimeout(removeLoader, 2000));
-
-            // Fallback 2: Absolute safety timer
-            setTimeout(removeLoader, 4000);
-        })();
+        window.addEventListener("load", () => {
+            const loader = document.getElementById("loader");
+            if (loader) {
+                // Increased delay to 3 seconds as requested
+                setTimeout(() => {
+                    loader.style.opacity = "0";
+                    loader.style.visibility = "hidden";
+                }, 3000);
+            }
+        });
     </script>
     <script src="script.js?v=2"></script>
 </body>
